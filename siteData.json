@@ -59,6 +59,7 @@
         "user-stories": "User stories",
         "use-cases": "Use cases",
         "non-functional-requirements": "Non-Functional Requirements",
+        "more-to-be-added": "{More to be added}",
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
@@ -115,6 +116,9 @@
         "listing-all-persons-list": "Listing all persons : list",
         "editing-a-person-edit": "Editing a person : edit",
         "locating-persons-by-name-find": "Locating persons by name: find",
+        "search-by-tag-find-by-tag": "Search by tag: find_by_tag",
+        "exporting-a-subset-of-data": "Exporting a subset of data",
+        "importing-a-datafile": "Importing a datafile",
         "deleting-a-person-delete": "Deleting a person : delete",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
@@ -158,7 +162,8 @@
       "src": "team/zilong.md",
       "headings": {
         "chua-zi-long": "Chua Zi Long",
-        "profile-summary": "Profile/Summary"
+        "profile-summary": "Profile/Summary",
+        "education": "EDUCATION"
       },
       "headingKeywords": {}
     },
