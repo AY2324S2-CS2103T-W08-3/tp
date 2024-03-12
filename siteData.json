@@ -10,6 +10,7 @@
         "john-doe": "John Doe",
         "jane-doe": "Jane Doe",
         "johnny-doe": "Johnny Doe",
+        "sarji-elijah-see-bona": "Sarji Elijah See Bona",
         "wilson-widyadhana": "Wilson Widyadhana",
         "chua-zi-long": "Chua Zi Long"
       },
@@ -142,6 +143,14 @@
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/sarji.md",
+      "headings": {
+        "sarji-elijah-see-bona": "Sarji Elijah See Bona",
+        "profile-summary": "Profile/Summary"
       },
       "headingKeywords": {}
     },
