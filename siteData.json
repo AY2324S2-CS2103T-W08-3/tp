@@ -12,7 +12,8 @@
         "johnny-doe": "Johnny Doe",
         "sarji-elijah-see-bona": "Sarji Elijah See Bona",
         "wilson-widyadhana": "Wilson Widyadhana",
-        "chua-zi-long": "Chua Zi Long"
+        "chua-zi-long": "Chua Zi Long",
+        "tahsin-hasem-aonim": "Tahsin Hasem Aonim"
       },
       "headingKeywords": {}
     },
@@ -150,6 +151,14 @@
       "src": "team/sarji.md",
       "headings": {
         "sarji-elijah-see-bona": "Sarji Elijah See Bona",
+        "profile-summary": "Profile/Summary"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/tahsinhasem.md",
+      "headings": {
+        "tahsin-hasem-aonim": "Tahsin Hasem Aonim",
         "profile-summary": "Profile/Summary"
       },
       "headingKeywords": {}
