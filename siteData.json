@@ -114,7 +114,6 @@
         "listing-all-persons-list": "Listing all persons : list",
         "editing-a-person-edit": "Editing a person : edit",
         "locating-persons-by-name-find": "Locating persons by name: find",
-        "search-by-tag-find-by-tag": "Search by tag: find_by_tag",
         "exporting-a-subset-of-data-find-and-export": "Exporting a subset of data: find_and_export",
         "importing-a-datafile-import": "Importing a datafile: import",
         "deleting-a-person-delete": "Deleting a person : delete",
