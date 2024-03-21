@@ -8,6 +8,6 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('div',{attrs:{"id":"content-wrapper"}},[_c('h1',{attrs:{"id":"wilson-widyadhana"}},[_v("Wilson Widyadhana"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#wilson-widyadhana","onclick":"event.stopPropagation()"}})]),_v(" "),_c('h2',{attrs:{"id":"profile-summary"}},[_v("Profile/Summary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#profile-summary","onclick":"event.stopPropagation()"}})]),_v(" "),_c('p',[_v("Hello there! I'm Wilson, a 3rd year Computer Science and Data Science and Analytics Double Degree student at the National University of Singapore.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.3.0")]),_v(", generated on Mon, 18 Mar 2024, 9:16:27 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.3.0")]),_v(", generated on Thu, 21 Mar 2024, 11:18:29 GMT+8]")])])])}
 }];
   
