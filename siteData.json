@@ -50,6 +50,8 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
+        "importing-feature": "Importing feature",
+        "edit-schedule-feature": "Edit schedule feature",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
@@ -118,6 +120,9 @@
         "importing-a-datafile-import": "Importing a datafile: import",
         "deleting-a-person-delete": "Deleting a person : delete",
         "clearing-all-entries-clear": "Clearing all entries : clear",
+        "editing-an-event-edit-schedule": "Editing an event : edit_schedule",
+        "listing-all-events-list-schedule": "Listing all events : list_schedule",
+        "deleting-an-event-delete-schedule": "Deleting an event : delete_schedule",
         "exiting-the-program-exit": "Exiting the program : exit",
         "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
@@ -129,9 +134,9 @@
     },
     {
       "src": "index.md",
-      "title": "",
+      "title": "Home",
       "headings": {
-        "addressbook-level-3": "AddressBook Level-3"
+        "student-contact-manager": "Student Contact Manager"
       },
       "headingKeywords": {}
     },
