@@ -52,6 +52,7 @@
         "implementation": "Implementation",
         "importing-feature": "Importing feature",
         "edit-schedule-feature": "Edit schedule feature",
+        "find-schedule-feature": "Find schedule feature",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",

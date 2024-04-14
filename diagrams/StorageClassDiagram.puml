@@ -22,6 +22,13 @@ Class JsonAdaptedPerson
 Class JsonAdaptedTag
 }
 
+package "Schedule Storage" #F4F6F6{
+Class "<<interface>>\nScheduleStorage" as ScheduleStorage
+Class JsonScheduleStorage
+Class JsonSerializableScheduleList
+Class JsonAdaptedSchedule
+}
+
 }
 
 Class HiddenOutside #FFFFFF
@@ -30,14 +37,20 @@ HiddenOutside ..> Storage
 StorageManager .up.|> Storage
 StorageManager -up-> "1" UserPrefsStorage
 StorageManager -up-> "1" AddressBookStorage
+StorageManager -down-> "1" ScheduleStorage
 
 Storage -left-|> UserPrefsStorage
 Storage -right-|> AddressBookStorage
+Storage -down-|> ScheduleStorage
 
 JsonUserPrefsStorage .up.|> UserPrefsStorage
 JsonAddressBookStorage .up.|> AddressBookStorage
 JsonAddressBookStorage ..> JsonSerializableAddressBook
 JsonSerializableAddressBook --> "*" JsonAdaptedPerson
 JsonAdaptedPerson --> "*" JsonAdaptedTag
+
+JsonScheduleStorage .up.|> ScheduleStorage
+JsonScheduleStorage ..> JsonSerializableScheduleList
+JsonSerializableScheduleList --> "*" JsonAdaptedSchedule
 
 @enduml

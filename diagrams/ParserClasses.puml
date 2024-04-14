@@ -46,7 +46,7 @@ ArgumentTokenizer .down.> Prefix
 XYZCommand -up-|> Command
 FindAndExportCommand -up-|> Command
 
-note right of XYZCommandParser: XYZCommandParser = AddCommandParser, AddressBookParser,\nDeleteCommandParser, EditCommandParser,\nFindAndExportCommandParser, ImportCommandParser
+note right of XYZCommandParser: XYZCommandParser = AddCommandParser, AddressBookParser,\nAddScheduleCommandParser, DeleteCommandParser, DeleteScheduleCommandParser, \nEditCommandParser, EditScheduleCommandParser, FindCommandParser, \nFindScheduleCommandParser, ImportCommandParser, ThemeCommandParser
 
 note bottom of XYZCommand: See XYZCommand subclasses in\nLogicClassDiagram.puml
 
