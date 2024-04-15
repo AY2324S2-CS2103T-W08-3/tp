@@ -1,0 +1,22 @@
+@startuml
+actor User
+participant "UI" as UI
+participant "Parser" as Parser
+participant "AddScheduleCommand" as Command
+participant "Model" as Model
+
+User -> UI : add_schedule title/Meeting d/Project\ndiscussion start/2024-04-21 15:00 end/2024-04-21 16:00
+UI -> Parser : parse(command)
+Parser -> Command : new AddScheduleCommand(schedule)
+activate Command
+
+Command -> Model : addSchedule(schedule)
+activate Model
+Model --> Command : scheduleAdded
+deactivate Model
+
+Command --> UI : CommandResult("Schedule added successfully")
+deactivate Command
+
+UI --> User : Display "Schedule added successfully"
+@enduml
