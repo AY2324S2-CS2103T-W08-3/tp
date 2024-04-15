@@ -12,6 +12,7 @@ Class MainWindow
 Class HelpWindow
 Class ResultDisplay
 Class PersonListPanel
+Class ScheduleListPanel
 Class PersonCard
 Class ScheduleListPanel
 Class ScheduleCard
@@ -47,6 +48,7 @@ MainWindow -left-|> UiPart
 ResultDisplay --|> UiPart
 CommandBox --|> UiPart
 PersonListPanel --|> UiPart
+ScheduleListPanel --|> UiPart
 PersonCard --|> UiPart
 ScheduleListPanel --|> UiPart
 ScheduleCard --|> UiPart

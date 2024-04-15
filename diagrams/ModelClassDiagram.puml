@@ -8,7 +8,10 @@ Package Model as ModelPackage <<Rectangle>>{
 Class "<<interface>>\nReadOnlyAddressBook" as ReadOnlyAddressBook
 Class "<<interface>>\nReadOnlyUserPrefs" as ReadOnlyUserPrefs
 Class "<<interface>>\nModel" as Model
+Class "<<interface>>\nReadOnlyScheduleList" as ReadOnlyScheduleList
+
 Class AddressBook
+Class ScheduleList
 Class ModelManager
 Class UserPrefs
 
@@ -20,6 +23,10 @@ Class Name
 Class Phone
 Class Tag
 
+Class Schedule
+Class Title
+Class Description
+
 Class I #FFFFFF
 }
 
@@ -27,10 +34,12 @@ Class HiddenOutside #FFFFFF
 HiddenOutside ..> Model
 
 AddressBook .up.|> ReadOnlyAddressBook
+ScheduleList .up.|> ReadOnlyScheduleList
 
 ModelManager .up.|> Model
 Model .right.> ReadOnlyUserPrefs
 Model .left.> ReadOnlyAddressBook
+Model .right.> ReadOnlyScheduleList
 ModelManager -left-> "1" AddressBook
 ModelManager -right-> "1" UserPrefs
 UserPrefs .up.|> ReadOnlyUserPrefs
@@ -42,6 +51,12 @@ Person *--> "1" Phone
 Person *--> "1" Email
 Person *--> "1" Address
 Person *--> "*" Tag
+
+ScheduleList --> "~* all" Schedule
+Schedule *--> "1" Title
+Schedule *--> "1" Description
+
+note right of Schedule: Schedule also depends on LocalDateTime\nfor its start and end times.
 
 Person -[hidden]up--> I
 UniquePersonList -[hidden]right-> I
