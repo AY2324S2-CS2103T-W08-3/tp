@@ -15,6 +15,8 @@
 
 This Developer Guide (DG) has been adapted from the AB-3 developer guide found [here](https://se-education.org/addressbook-level3/DeveloperGuide.html).
 
+GitHub Copilot (autocomplete feature) was used throughout the project to assist write Javadocs, Test Cases and implement some methods (by Tahsin, Sarji).
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## **Setting up, getting started**
@@ -159,16 +161,41 @@ Classes used by multiple components are in the `scm.address.commons` package.
 
 This section describes some noteworthy details on how certain features are implemented.
 
+### Finding and Exporting feature
+
+#### Implementation
+
+The `FindAndExportCommand` feature is implemented to find users based on specified criteria and export their information. The command allows filtering of users by tags, name, and address, and exports the filtered list to a specified file, in a specified format.
+
+This feature implements the following significant operations:
+
+* `FindAndExportCommand#createPredicateForFiltering()`: This method creates a predicate for filtering users based on the provided tag, name, and address. It returns a predicate that can be used to filter the list of users.
+
+* `FindAndExportCommand#execute()`: This method executes the command. It first updates the filtered person list in the model based on the predicate created by `createPredicateForFiltering()`. Then, it exports the filtered list to the specified file.
+
+* `FindAndExportCommand#exportData()`: This method exports the filtered list of users to the specified file. It determines the file format based on the file extension and calls the appropriate method to export the data in that format.
+
+* `FindAndExportCommand#exportDataAsJson()`: This method exports the filtered list of users to a JSON file. It uses `JsonAddressBookStorage` to save the list of users to the file.
+
+* `FindAndExportCommand#exportDataAsCsv()`: This method exports the filtered list of users to a CSV file. It manually constructs the CSV data and writes it to the file.
+
+The implementation of this feature follows Object-Oriented Programming (OOP) principles closely to prevent any one method from doing too many tasks. The logic of this feature is implemented in similar ways to how the application saves its own main save file.
+
+Below is a sequence diagram on how the `FindAndExportCommand` feature works:
+
+<puml src="diagrams/FindAndExportSequenceDiagram.puml" width="550" />
+
 ### Importing feature
 
 #### Implementation
 
-The import feature is implemented through the use of `JsonAddressBookStorage`. Given that the user of the application has a JSON file containing contacts in a format similar to the save file of the application, they will be able to import such contacts by providing the filename of the JSON file. The implementation of the feature is somewhat similar to how the application natively reads its own contact manager data, and as such uses similar functions.
+The import feature is implemented through the use of `JsonAddressBookStorage` . Given that the user of the application has a JSON file (containing contacts in a format similar to the save file of the application) or a CSV file (containing contacts in a format similar to how data is exported as a CSV file), they will be able to import such contacts by providing the filename of the JSON or CSV file. The implementation of the feature is somewhat similar to how the application natively reads its own contact manager data, and as such uses similar functions.
 
-This feature implements the following operations, other than the ones it is overriding:
+This feature implements the following significant operations, other than the ones it is overriding:
 
 * `ImportCommand#retrievePersonsFromFile()`: Retrieves the `Person`s that are read from a given file and inserts them into a list of `JsonAdaptedPerson`.
 * `ImportCommand#readPersons()`: Reads the `Person`s currently inside the file to be read. This command succeeds only if the application is able to read the file and if the file is in the correct JSON format.
+* `ImportCommand#readPersonsFromCSV()`:  Reads the `Person`s currently inside the file to be read. This command succeeds only if the application is able to read the file and if the file is in the correct CSV format.
 
 This command is implemented in the above manner in order to follow OOP principles more closely, more specifically to prevent any one method from doing too many tasks. Moreover, the reuse of `JsonAddressBookStorage` and other related classes is done in order to aid future development of the feature. Following the same spirit, the logic of this feature is implemented in similar ways to how the application reads its own main save file.
 
