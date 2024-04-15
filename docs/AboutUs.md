@@ -19,7 +19,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[portfolio](team/sarji.md)]
 
 * Role: Developer
-* Responsibilities: Search by tag + Exporting Data
+* Responsibilities: Find by attributes, Schedule commands, User Guide, Developer Guide
 
 ### Wilson Widyadhana
 
@@ -39,7 +39,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[portfolio](team/zilong.md)]
 
 * Role: Developer
-* Responsibilities: README + Site-wide Settings + Exporting Data
+* Responsibilities: README, Site-wide Settings, Exporting Data, Calendar
 
 ### Tahsin Hasem Aonim
 

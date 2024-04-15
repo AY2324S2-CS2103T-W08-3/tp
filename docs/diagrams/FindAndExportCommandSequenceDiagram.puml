@@ -1,0 +1,26 @@
+@startuml
+actor User
+participant ":LogicManager" as LogicManager
+participant ":FindAndExportCommand" as FindAndExportCommand
+participant ":Model" as Model
+participant ":JsonAddressBookStorage" as JsonAddressBookStorage
+
+User -> LogicManager : execute("find_and_export cs2103t john olive street 42 output1.json")
+activate LogicManager
+LogicManager -> FindAndExportCommand : new FindAndExportCommand("cs2103t", "john", "olive street 42", new File("output1.json"))
+activate FindAndExportCommand
+LogicManager -> FindAndExportCommand : execute()
+FindAndExportCommand -> FindAndExportCommand : createPredicateForFiltering("cs2103t", "john", "olive street 42")
+FindAndExportCommand -> Model : updateFilteredPersonList(predicate)
+activate Model
+Model --> FindAndExportCommand
+FindAndExportCommand -> FindAndExportCommand : exportData(filteredList, file)
+FindAndExportCommand -> FindAndExportCommand : getFileFormat(file)
+FindAndExportCommand -> FindAndExportCommand : exportDataAsJson(users, file)
+FindAndExportCommand -> JsonAddressBookStorage : saveAddressBook(addressBook)
+activate JsonAddressBookStorage
+JsonAddressBookStorage --> FindAndExportCommand
+FindAndExportCommand --> LogicManager : new CommandResult("Export successful to [output1.json].")
+deactivate FindAndExportCommand
+deactivate LogicManager
+@enduml
