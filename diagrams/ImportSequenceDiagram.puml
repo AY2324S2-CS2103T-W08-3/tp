@@ -1,0 +1,88 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":ImportCommandParser" as ImportCommandParser LOGIC_COLOR
+participant "i:ImportCommand" as ImportCommand LOGIC_COLOR
+participant "r:CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant "m:Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("import f/filename.json")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("import f/filename.json")
+activate AddressBookParser
+
+create ImportCommandParser
+AddressBookParser -> ImportCommandParser
+activate ImportCommandParser
+
+ImportCommandParser --> AddressBookParser
+deactivate ImportCommandParser
+
+AddressBookParser -> ImportCommandParser : parse("f/filename.json")
+activate ImportCommandParser
+
+create ImportCommand
+ImportCommandParser -> ImportCommand
+activate ImportCommand
+
+ImportCommand --> ImportCommandParser :
+deactivate ImportCommand
+
+ImportCommandParser --> AddressBookParser : i
+deactivate ImportCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+ImportCommandParser -[hidden]-> AddressBookParser
+destroy ImportCommandParser
+
+AddressBookParser --> LogicManager : i
+deactivate AddressBookParser
+
+LogicManager -> ImportCommand : execute(m)
+activate ImportCommand
+
+ImportCommand -> ImportCommand : retrievePersonsFromFile(l)
+activate ImportCommand
+
+ImportCommand --> ImportCommand
+deactivate ImportCommand
+
+
+alt JSON format
+    ImportCommand -> ImportCommand : readPersons(f)
+    activate ImportCommand
+    ImportCommand --> ImportCommand
+    deactivate ImportCommand
+else CSV format
+    ImportCommand -> ImportCommand : readPersonsFromCsv(f)
+    activate ImportCommand
+    ImportCommand --> ImportCommand
+    deactivate ImportCommand
+end
+ImportCommand -> Model : addPerson(p)
+activate Model
+
+Model --> ImportCommand
+deactivate Model
+
+create CommandResult
+ImportCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> ImportCommand
+deactivate CommandResult
+
+ImportCommand --> LogicManager : r
+deactivate ImportCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml

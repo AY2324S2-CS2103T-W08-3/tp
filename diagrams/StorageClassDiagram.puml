@@ -54,5 +54,4 @@ JsonScheduleStorage .up.|> ScheduleStorage
 JsonScheduleStorage ..> JsonSerializableScheduleList
 JsonSerializableScheduleList --> "*" JsonAdaptedSchedule
 
-
 @enduml
