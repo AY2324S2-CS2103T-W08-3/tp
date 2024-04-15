@@ -205,6 +205,16 @@ Below is a sequence diagram on how the import feature works:
 
 <puml src="diagrams/ImportSequenceDiagram.puml" />
 
+### Add schedule feature
+
+This section explains the implementation of the `AddScheduleCommand`.
+Below is a sequence diagram that shows the interactions involved when a user adds a schedule through the application.
+
+<puml src="diagrams/AddScheduleCommandSequenceDiagram.puml" width="280" />
+
+As shown in the diagram, the `AddScheduleCommand` takes user input from the UI, parses it to create a schedule.
+It interacts with the model to add the schedule to the system. A success message is then relayed back to the user.
+
 ### Edit schedule feature
 
 #### Implementation
@@ -556,16 +566,6 @@ Use case ends.
     * 2a1. The application alerts the user that the schedule could not be added.
 
 Use case ends.
-
-### Add Schedule Command Implementation
-
-This section explains the implementation of the `AddScheduleCommand`.
-Below is a sequence diagram that shows the interactions involved when a user adds a schedule through the application.
-
-<puml src="diagrams/AddScheduleCommandSequenceDiagram.puml" width="280" />
-
-As shown in the diagram, the `AddScheduleCommand` takes user input from the UI, parses it to create a schedule.
-It interacts with the model to add the schedule to the system. A success message is then relayed back to the user.
 
 **Use case: Editing a schedule**
 
