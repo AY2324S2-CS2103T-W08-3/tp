@@ -8,6 +8,6 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('div',{attrs:{"id":"content-wrapper"}},[_c('h1',{attrs:{"id":"sarji-elijah-see-bona"}},[_v("Sarji Elijah See Bona"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#sarji-elijah-see-bona","onclick":"event.stopPropagation()"}})]),_v(" "),_c('h2',{attrs:{"id":"profile-summary"}},[_v("Profile/Summary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#profile-summary","onclick":"event.stopPropagation()"}})]),_v(" "),_c('p',[_v("Current Year 2 Computer Science and Mathematics Double Major student from the National University of Singapore.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Mon, 15 Apr 2024, 22:41:54 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Mon, 15 Apr 2024, 23:04:44 GMT+8]")])])])}
 }];
   
