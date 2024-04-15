@@ -225,7 +225,7 @@ The delete schedule feature is implemented through the use of `DeleteScheduleCom
 
 #### Implementation
 
-The find schedule feature is implemented through the use of `FindScheduleCommand`. Given a set of attributes (title, description, beforeDateTime, afterDateTime, duringDateTime) to search for, this command will be able to find all schedules that match the all attributes input by the user. The implementation of the feature is similar to that of `FindCommand`.
+The find schedule feature is implemented through the use of `FindScheduleCommand`. Given a set of attributes (title, description, beforeDateTime, afterDateTime, duringDateTime) to search for, this command will be able to find all schedules that match the all attributes input by the user. The implementation of the feature is similar to that of `FindCommand`, where predicates are used to filter out the schedules. An attribute that is not specified by the user will be associated with a predicate that always returns true. A schedule is displayed if and only if it satisfies all the predicates.
 
 This command is implemented in the above manner to improve its adherence to OOP principles, as well as to allow it to have similarities to the implementation of `FindCommand`. This would allow it to be more extensible and supportive of further development.
 
