@@ -90,7 +90,7 @@ The `Ui` component,
 
 Here's a (partial) class diagram of the `Logic` component:
 
-<puml src="diagrams/LogicClassDiagram.puml" width="550"/>
+<puml src="diagrams/LogicClassDiagram.puml" />
 
 The sequence diagram below illustrates the interactions within the `Logic` component, taking `execute("delete 1")` API call as an example.
 
@@ -111,7 +111,7 @@ How the `Logic` component works:
 
 Here are the other classes in `Logic` (omitted from the class diagram above) that are used for parsing a user command:
 
-<puml src="diagrams/ParserClasses.puml" width="600"/>
+<puml src="diagrams/ParserClasses.puml" />
 
 How the parsing works:
 * When called upon to parse a user command, the `AddressBookParser` class creates an `XYZCommandParser` (`XYZ` is a placeholder for the specific command name e.g., `AddCommandParser`) which uses the other classes shown above to parse the user command and create a `XYZCommand` object (e.g., `AddCommand`) which the `AddressBookParser` returns back as a `Command` object.
@@ -120,7 +120,7 @@ How the parsing works:
 ### Model component
 **API** : [`Model.java`](https://github.com/AY2324S2-CS2103T-W08-3/tp/blob/master/src/main/java/scm/address/model/Model.java)
 
-<puml src="diagrams/ModelClassDiagram.puml" width="450" />
+<puml src="diagrams/ModelClassDiagram.puml" />
 
 
 The `Model` component,
@@ -144,7 +144,7 @@ The `Model` component,
 
 **API** : [`Storage.java`](https://github.com/AY2324S2-CS2103T-W08-3/tp/blob/master/src/main/java/scm/address/storage/Storage.java)
 
-<puml src="diagrams/StorageClassDiagram.puml" width="550" />
+<puml src="diagrams/StorageClassDiagram.puml" width="650" />
 
 The `Storage` component,
 * can save both contact manager data, user preference data, and schedule list data in JSON format, and read them back into corresponding objects.
@@ -183,7 +183,7 @@ The implementation of this feature follows Object-Oriented Programming (OOP) pri
 
 Below is a sequence diagram on how the `FindAndExportCommand` feature works:
 
-<puml src="diagrams/FindAndExportSequenceDiagram.puml" width="550" />
+<puml src="diagrams/FindAndExportSequenceDiagram.puml" />
 
 ### Importing feature
 
@@ -203,7 +203,7 @@ There is initially an alternative considered to refit the entire logic of the mo
 
 Below is a sequence diagram on how the import feature works:
 
-<puml src="diagrams/ImportSequenceDiagram.puml" width="550" />
+<puml src="diagrams/ImportSequenceDiagram.puml" />
 
 ### Edit schedule feature
 
