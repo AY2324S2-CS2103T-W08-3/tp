@@ -54,6 +54,7 @@
         "edit-schedule-feature": "Edit schedule feature",
         "delete-schedule-feature": "Delete schedule feature",
         "find-schedule-feature": "Find schedule feature",
+        "change-theme-feature": "Change theme feature",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
