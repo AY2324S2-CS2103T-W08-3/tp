@@ -8,6 +8,6 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('div',{attrs:{"id":"content-wrapper"}},[_c('h1',{attrs:{"id":"tahsin-hasem-aonim"}},[_v("Tahsin Hasem Aonim"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tahsin-hasem-aonim","onclick":"event.stopPropagation()"}})]),_v(" "),_c('h2',{attrs:{"id":"profile-summary"}},[_v("Profile/Summary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#profile-summary","onclick":"event.stopPropagation()"}})]),_v(" "),_c('p',[_v("Hey! I'm Tahsin, a 2nd year Computer Science student at the National University of Singapore. I also study Physics (2nd Major) and Quant Finance (Minor). My interests peak in Deep Learning and Statistical Mechanics! Hope to have a successful semester with you all!")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Mon, 15 Apr 2024, 23:41:49 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Mon, 15 Apr 2024, 23:43:41 GMT+8]")])])])}
 }];
   
